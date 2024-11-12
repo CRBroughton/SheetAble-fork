@@ -36,6 +36,9 @@ importers:
       '@storybook/addon-onboarding':
         specifier: ^8.4.2
         version: 8.4.2(react@18.3.1)(storybook@8.4.2)
+      '@storybook/addon-themes':
+        specifier: ^8.4.2
+        version: 8.4.2(storybook@8.4.2)
       '@storybook/blocks':
         specifier: ^8.4.2
         version: 8.4.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.2)
@@ -72,6 +75,9 @@ importers:
       eslint-plugin-storybook:
         specifier: ^0.11.0
         version: 0.11.0(eslint@9.14.0(jiti@1.21.6))(typescript@5.6.3)
+      eslint-plugin-tailwindcss:
+        specifier: ^3.17.5
+        version: 3.17.5(tailwindcss@3.4.14)
       globals:
         specifier: ^15.11.0
         version: 15.12.0
@@ -709,6 +715,11 @@ packages:
 
   '@storybook/addon-outline@8.4.2':
     resolution: {integrity: sha512-oTMlPEyT4CBqzcQbfemoJzJ6yzeRAmvrAx9ssaBcnQQRsKxo0D2Ri/Jmm6SNcR0yBHxYRkvIH+2phLw8aiflCQ==}
+    peerDependencies:
+      storybook: ^8.4.2
+
+  '@storybook/addon-themes@8.4.2':
+    resolution: {integrity: sha512-SEeADvNxdkgfCEK4kxuV5w0ZFkdWQjJ3GySgLaXZM7FkEySfHyRIvkcoJml6Q0zJdChywVYNTRXonL0hmBlo7Q==}
     peerDependencies:
       storybook: ^8.4.2
 
@@ -1541,6 +1552,12 @@ packages:
     engines: {node: '>= 18'}
     peerDependencies:
       eslint: '>=6'
+
+  eslint-plugin-tailwindcss@3.17.5:
+    resolution: {integrity: sha512-8Mi7p7dm+mO1dHgRHHFdPu4RDTBk69Cn4P0B40vRQR+MrguUpwmKwhZy1kqYe3Km8/4nb+cyrCF+5SodOEmaow==}
+    engines: {node: '>=18.12.0'}
+    peerDependencies:
+      tailwindcss: ^3.4.0
 
   eslint-plugin-toml@0.11.1:
     resolution: {integrity: sha512-Y1WuMSzfZpeMIrmlP1nUh3kT8p96mThIq4NnHrYUhg10IKQgGfBZjAWnrg9fBqguiX4iFps/x/3Hb5TxBisfdw==}
@@ -3554,6 +3571,11 @@ snapshots:
       storybook: 8.4.2
       ts-dedent: 2.2.0
 
+  '@storybook/addon-themes@8.4.2(storybook@8.4.2)':
+    dependencies:
+      storybook: 8.4.2
+      ts-dedent: 2.2.0
+
   '@storybook/addon-toolbars@8.4.2(storybook@8.4.2)':
     dependencies:
       storybook: 8.4.2
@@ -4555,6 +4577,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
       - typescript
+
+  eslint-plugin-tailwindcss@3.17.5(tailwindcss@3.4.14):
+    dependencies:
+      fast-glob: 3.3.2
+      postcss: 8.4.48
+      tailwindcss: 3.4.14
 
   eslint-plugin-toml@0.11.1(eslint@9.14.0(jiti@1.21.6)):
     dependencies:

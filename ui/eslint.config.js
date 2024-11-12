@@ -1,4 +1,5 @@
 import antfu from '@antfu/eslint-config';
+import tailwind from 'eslint-plugin-tailwindcss';
 
 export default await antfu({
   react: true,
@@ -9,4 +10,4 @@ export default await antfu({
   rules: {
     'no-console': 'error',
   },
-});
+}, ...tailwind.configs['flat/recommended']);
