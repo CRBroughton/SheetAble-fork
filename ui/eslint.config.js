@@ -1,28 +1,9 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
-import tseslint from 'typescript-eslint'
+import antfu from '@antfu/eslint-config'
 
-export default tseslint.config(
-  { ignores: ['dist'] },
-  {
-    extends: [js.configs.recommended, ...tseslint.configs.recommended],
-    files: ['**/*.{ts,tsx}'],
-    languageOptions: {
-      ecmaVersion: 2020,
-      globals: globals.browser,
-    },
-    plugins: {
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-    },
-    rules: {
-      ...reactHooks.configs.recommended.rules,
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
-      ],
-    },
+export default await antfu({
+  react: true,
+  ignores: ['dist', '**/dist/**', 'public', '**/public/**', 'coverage', '**/coverage/**', 'node_modules', '**/node_modules/**', 'tsconfig.app.json', 'tsconfig.json', 'tsconfig.node.json'],
+  rules: {
+    'no-console': 'error',
   },
-)
+})
