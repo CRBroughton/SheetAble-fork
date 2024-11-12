@@ -1,5 +1,5 @@
-import { cva, type VariantProps } from 'class-variance-authority'
-import React from 'react'
+import { cva, type VariantProps } from 'class-variance-authority';
+import React from 'react';
 
 const button = cva('button', {
   variants: {
@@ -27,7 +27,7 @@ const button = cva('button', {
     intent: 'primary',
     size: 'medium',
   },
-})
+});
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
@@ -38,4 +38,4 @@ export const Button: React.FC<ButtonProps> = ({
   intent,
   size,
   ...props
-}) => <button type="button" className={button({ intent, size, className })} {...props} />
+}) => <button type="button" className={button({ intent, size, className })} {...props} />;

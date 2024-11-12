@@ -1,25 +1,25 @@
-import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
-import gbTranslation from './en-GB.json'
-import frTranslation from './fr-FR.json'
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+import gbTranslation from './en-GB.json';
+import frTranslation from './fr-FR.json';
 
 const resources = {
   gb: {
-    translation: gbTranslation
+    translation: gbTranslation,
   },
   fr: {
-    translation: frTranslation
-  }
+    translation: frTranslation,
+  },
 };
 
 i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: "en-GB",
+    lng: 'en-GB',
     interpolation: {
-      escapeValue: false
+      escapeValue: false,
     },
   });
 
-  export default i18n;
+export default i18n;

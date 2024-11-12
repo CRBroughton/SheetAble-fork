@@ -1,16 +1,16 @@
-import { useState } from 'react'
-import { useTranslation } from 'react-i18next'
-import reactLogo from './assets/react.svg'
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import reactLogo from './assets/react.svg';
 
-import viteLogo from '/vite.svg'
+import viteLogo from '/vite.svg';
 
 function App() {
-  const [count, setCount] = useState(0)
-  const { t, i18n } = useTranslation()
+  const [count, setCount] = useState(0);
+  const { t, i18n } = useTranslation();
 
   const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng)
-  }
+    i18n.changeLanguage(lng);
+  };
 
   return (
     <>
@@ -49,7 +49,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
