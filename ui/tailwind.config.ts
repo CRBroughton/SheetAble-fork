@@ -4,23 +4,22 @@ const config: Config = {
   content: [
     './index.html',
     './src/**/*.{js,ts,jsx,tsx}',
-    './.storybook/**/*.{js,ts,jsx,tsx}', // Include Storybook files
+    './.storybook/**/*.{js,ts,jsx,tsx}',
   ],
-  darkMode: 'class', // Tailwind's dark mode via class
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
+        positive: '#4CAF50',
+        negative: '#FF5722',
+        neutral: '#858585',
         light: {
-          background: '#FFFFFF', // Light background color
-          text: '#000000', // Light text color
-          positive: '#4CAF50',
-          negative: '#FF5722',
+          background: '#FFFFFF',
+          text: '#000000',
         },
         dark: {
-          background: '#333333', // Dark background color
-          text: '#FFFFFF', // Dark text color
-          positive: '#4CAF50',
-          negative: '#FF5722',
+          background: '#333333',
+          text: '#FFFFFF',
         },
       },
     },
