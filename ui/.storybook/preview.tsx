@@ -34,8 +34,8 @@ const preview: Preview = {
       body.style.width = '100vw';
 
       if (storyRoot) {
-        storyRoot.style.height = '100%';
-        storyRoot.style.width = '100%';
+        storyRoot.style.height = '100vh';
+        storyRoot.style.width = '100vw';
       }
 
       return (
